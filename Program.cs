@@ -357,18 +357,24 @@ namespace Route_Session_03
 
 
             #region Evolution of Switch in C#
-
             #region Ex01 [SWitch In C# 6.0]
 
-            //      Console.Write("Enter Enetr Your Age : ");
-            //             int Age = int.Parse(Console.ReadLine);
+        Console.Write("Enter Enetr Your Age : ");
+    int Age = int.Parse(Console.ReadLine());
+switch(Age)
+    {
+        case > 22:
+            Console.WriteLine("Yuo Age is Greater Than 22");
+            break;
 
-            //        switch(Age)
-            //{
+        case < 22:
+            Console.WriteLine("Yuo Age is Less Then 22");
+            break;
 
+        default: Console.WriteLine("Your Age is 22");
+            break;
 
-
-            //}
+    }
 
 
 
