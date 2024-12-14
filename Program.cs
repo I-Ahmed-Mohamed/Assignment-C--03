@@ -376,10 +376,91 @@ switch(Age)
 
     }
 
-
-
             #endregion
 
+                
+
+ #region Ex02 [SWitch In C# 7.0]
+
+object input = new object();
+
+input = 10.25;
+input = "ahmed";
+input = 5;
+
+
+switch (input)
+{
+    case int Number when Number > 5 && Number < 100:
+        Console.WriteLine($"input is int and Equal = {Number}");
+        break;
+
+    case double Number:
+        Console.WriteLine($"input is int and Equal = {Number}");
+        break;
+
+    case string:
+        Console.WriteLine($"input is int and Equal = {Name}");
+        break;
+}
+#endregion
+
+    #region Ex02 [SWitch In C# 8.0]
+#region Ex 01
+// بعد التحديث SWitch طريقه ال 
+
+//Console.WriteLine("Please Entr Number");
+//int option = int.Parse(Console.ReadLine());
+
+//String Massge = option switch
+//{
+//    1 => "option 1",
+//    2 => "option 2",
+//    3 => " option 3",
+//    _ => "suported option"
+//};
+#endregion
+    
+    #region Ex 02
+      Emploeyy emploeyee01 = new Emploeyy();
+  emploeyee01.Id =  1;
+  emploeyee01.Name = "Ahmed";
+  emploeyee01.Age = 21;
+
+
+  String Massage = emploeyee01 switch
+  {
+      { Id: 1 } => "Hello mona  your id is 1",
+      { Id: 2 } => "Hello mona  your id is 1",
+
+      _ => "invalid Embloyee"
+  } ;
+
+  Console.WriteLine(Massage);
+    #endregion
+
+#endregion
+
+
+ #region Ex02 [SWitch In C# 9.0]
+Emploeyy emploeyee01 = new Emploeyy();
+emploeyee01.Id =  1;
+emploeyee01.Name = "Ahmed";
+emploeyee01.Age = 21;
+
+
+String Massage = emploeyee01 switch
+{
+    { Age: <=40 } => $"Hello {emploeyee01.Name}  your id is 40",
+    { Age: >=80 and <= 40 } => $"Hello {emploeyee01.Name}  your id is 80",
+    { Age: 80 or 50 } => $"  your Age is 45 or 80",
+
+
+    _ => "invalid Embloyee"
+} ;
+
+Console.WriteLine(Massage);
+#endregion
             #endregion
 
 
